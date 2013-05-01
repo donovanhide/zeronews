@@ -63,7 +63,7 @@
 	        	<p> 
 	          		Donovan Hide
 	          		<br> 
-	          		October 2012
+	          		April 2013
 	          		<br>
 	          		<a href="http://github.com/donovanhide/zeronews">http://github.com/donovanhide/zeronews</a>
 	        	</p> 
@@ -88,14 +88,14 @@
 			  		How is your project different from what others are already doing? 
 				</h3>
 			  	<p>
-			  		<a href="http://site.mxit.com/pages/trade">Mxit</a> charges for news using micro-payments and do not have a data deal with networks. <a href="http://www.facebook.com/blog/blog.php?post=391295167130">Facebook</a> and <a href="http://google-africa.blogspot.co.uk/2012/07/send-and-receive-gmail-on-your-phone-as.html">Google</a> have deals which Zero News intends to piggyback on to disseminate news.
+			  		<a href="http://site.mxit.com/pages/trade">Mxit</a> charges for news using micro-payments and do not have a data deal with networks. <a href="http://www.facebook.com/blog/blog.php?post=391295167130">Facebook</a> and <a href="http://support.google.com/contact/bin/answer.py?hl=en&p=freezone&answer=3013890&rd=1">Google</a> have deals which Zero News intends to piggyback on to disseminate news. A very similar model has been adopted by Wikipedia who have managed to get their URL's zero-rated in <a href="http://upload.wikimedia.org/wikipedia/commons/6/64/Reaching_next_billion_users_Wikimania_Mobile_2012.pdf">numerous countries</a>.
 				</p>
 				<br>
 				<h3>
 					How and why will your solution work?
 				</h3>
 				<p>
-					African news organisations will agree to provide a minimum of 5 news articles a day with a reasonable word count. This will be published on a 0.rss news feed which, via a <a href="https://code.google.com/p/pubsubhubbub/">PubSubHubBub</a> server, will be instantaneously broadcast to the Zero Facebook streams of subscribers to Zero News at no cost to the user. Phones with no Internet capability will be supported via the free Gmail SMS service. News organisations can view the analytics of each article and see what news is being discussed and shared and get a real insight into a previously unreachable demographic.
+					African news organisations will agree to provide a minimum of 5 news articles a day with a reasonable word count. These articles will be instantaneously broadcast to the Zero Facebook and Google+ streams of subscribers to Zero News at no cost to the user. News organisations can view the analytics of each article and see what news is being discussed and shared and get a real insight into a previously unreachable demographic.
 				</p>
 			</article>	
 			<article>
@@ -112,6 +112,56 @@
 				<p>
 					Involved news organisations would advertise the service through their printed papers, radio stations and web sites. "Zero News: 5 articles a day for free".
 				</p>
+			</article>
+			<article class='smaller'>
+				<h3>
+					Target Countries
+				</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Operator</th>
+							<th><a href="http://www.facebook.com/blog/blog.php?post=391295167130">Zero Facebook</a></th>
+							<th><a href="http://support.google.com/contact/bin/answer.py?hl=en&p=freezone&answer=3013890&rd=1">Google Freezone</a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Airtel</td>
+							<td>
+								<a href="http://www.airtel.com/wps/wcm/connect/africaairtel/ghana/home/pg_free_access_facebook">Ghana</a>
+								<a href="http://www.airtel.com/wps/wcm/connect/africaairtel/Nigeria/Personal/2_good_classic/terms_and_conditions/">Nigeria</a>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>MTN</td>
+							<td>Benin, Ivory Coast, Guinea Bissau, Rwanda, Sudan, Swaziland, Uganda</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Zain</td>
+							<td>Congo</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Orange</td>
+							<td>Kenya, Madagascar, Tunisia</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Tunisiana</td>
+							<td>Tunisia</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>8.ta</td>
+							<td></td>
+							<td>South Africa</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Zero Facebook information is probably incomplete.</p>
 			</article>
 			<article> 
 			  		<h3>Mobile Brand Share: <a href="http://gs.statcounter.com/#mobile_vendor-af-monthly-201207-201209-map">StatCounter</a></h3>
@@ -151,18 +201,59 @@
 			</article>
 			<article>
 				<h3>
-					Prototype
-				</h3>
-				<p>
-					Theoretical discussions of re-purposing hourly radio news bulletins in text form to the 0.rss feed. Exploration of the <a href="https://developers.facebook.com/docs/reference/api/post/">Facebook API</a> and PubSubHubBub infrastructure for the instantaneous broadcast of news. Research into low-end browser usage and compatability. Thorough reading of Facebook and Google terms of service.
-				</p>
-				<br>
-				<h3>
 					Measurement of success
 				</h3>
 				<p>
-					At least one news organisation in every African nation providing zero cost news which is widely read and actively discussed and shared.
+					At least one news organisation in every African nation with a zero-rated channel providing zero cost news which is widely read and actively discussed and shared.
 				</p>
+			</article>
+			<article>
+				<h3>
+					Implementation (Milestone 1)
+				</h3>
+				<ul>
+					<li>
+						Fully explore the Facebook Stream and Google Moment/Activity API's to work out the best way to ingest the content into users' streams/walls.
+					</li>
+					<li>
+						Build an Appengine application in Go to allow control of user subscriptions and bundle and distribute news items by country.
+					</li>
+					<li>
+						Recruit testers in countries with zero-rated channel availability to use the beta app and provide feedback.
+					</li>
+					<li>
+						Liase with news organisations to find best ways of providing correctly formatted news content, through one of <a href="http://en.wikipedia.org/wiki/RSS">RSS</a>, <a href="http://developers.facebook.com/docs/opengraph/">Open Graph</a> markup or <a href="https://developers.google.com/+/web/snippet/">schema.org</a> markup.
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>
+					Implementation (Milestone 2)
+				</h3>
+				<ul>
+					<li>
+						Build a reporting interface so news providers can get feedback on which articles are being read or discussed and integrate Google+ and Facebook Insights analytics data.
+					</li>
+					<li>
+						Translate user interface into other languages (initially French).
+					</li>
+					<li>
+						Sign up news providers in selected countries, perhaps at <a href="http://www.africanmedialeadersforum.org/">AMLF 2013</a>.
+					</li>
+					<li>
+						Investigate SMS as a means of news delivery. Unsure if this is required, need more data on phone models in use in covered countries.
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h3>
+					Implentation (Post launch)
+				</h3>
+				<ul>
+					<li>
+						Discuss with Wikipedia partners (Praekalt foundation) how they arranged for URL's to be whitelisted with various <a href="http://wikimediafoundation.org/wiki/Mobile_partnerships#Where_is_Wikipedia_free_to_access.3F">mobile operators</a>. See if there is a possibility of getting a URL zero-rated purely for news dissemmination, thereby removing the dependency on Google and Facebook's terms of service and future subsidiy or deal alterations.
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>
@@ -173,7 +264,7 @@
 						<td>Developer for 6 months (including travel)</td><td>$16,000</td>
 					</tr>
 					<tr>
-						<td>African ambassador costs</td><td>$5,000</td>
+						<td>Travel and conference attendance costs</td><td>$5,000</td>
 					</tr>
 					<tr>
 						<td>Africa-based testing (recruits from Zanzibar TechCamp)</td><td>$2,000</td>
@@ -187,12 +278,7 @@
 				</table>
 			</article>
 			<article>
-				<h3>
-					Implementation
-				</h3>
-				<p>
-					Once agreement has been reached with at least 3 news organisations a prototype will be built where the CMS for each will provide a 0.rss news feed and ping facility. An App Engine instance will run a PubSubHubBub server which will push news to subscribers. A simple Facebook <a href="https://developers.facebook.com/docs/guides/mobile/web/">mobile app</a> will allow for users to select the countries of interest. Once subscribed news articles will be received on their walls. Alternatively a workflow for subscribing via Gmail SMS will be available. In the long term, a domain for Zero News itself could become zero-rated, removing the Facebook and Google dependency
-				</p>
+				<h3>Oversight and Governance</h3>
 			</article>
 			<article>
 				<h3>The Team</h3>
@@ -202,7 +288,6 @@
 					<li>Samantha Mckenzie: AllAfrica.com contact</li>
 					<li>Dickens Onditi Olewe: The Star Kenya contact</li>
 					<li>Chris Roper: Mail &amp; Guardian contact</li>
-					<li>William Bird: Media Monitoring Africa contact</li>
 				</ul>
 	    </section> 
  	</body>
